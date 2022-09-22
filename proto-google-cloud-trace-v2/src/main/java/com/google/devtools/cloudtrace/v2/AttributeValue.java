@@ -88,14 +88,14 @@ public final class AttributeValue extends com.google.protobuf.GeneratedMessageV3
             }
           case 16:
             {
-              valueCase_ = 2;
               value_ = input.readInt64();
+              valueCase_ = 2;
               break;
             }
           case 24:
             {
-              valueCase_ = 3;
               value_ = input.readBool();
+              valueCase_ = 3;
               break;
             }
           default:

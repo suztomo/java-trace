@@ -818,7 +818,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     @java.lang.Override
     public boolean containsAttributeMap(java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       return internalGetAttributeMap().getMap().containsKey(key);
     }
@@ -868,7 +868,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     public com.google.devtools.cloudtrace.v2.AttributeValue getAttributeMapOrDefault(
         java.lang.String key, com.google.devtools.cloudtrace.v2.AttributeValue defaultValue) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, com.google.devtools.cloudtrace.v2.AttributeValue> map =
           internalGetAttributeMap().getMap();
@@ -893,7 +893,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     public com.google.devtools.cloudtrace.v2.AttributeValue getAttributeMapOrThrow(
         java.lang.String key) {
       if (key == null) {
-        throw new java.lang.NullPointerException();
+        throw new NullPointerException("map key");
       }
       java.util.Map<java.lang.String, com.google.devtools.cloudtrace.v2.AttributeValue> map =
           internalGetAttributeMap().getMap();
@@ -1340,7 +1340,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       @java.lang.Override
       public boolean containsAttributeMap(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         return internalGetAttributeMap().getMap().containsKey(key);
       }
@@ -1390,7 +1390,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       public com.google.devtools.cloudtrace.v2.AttributeValue getAttributeMapOrDefault(
           java.lang.String key, com.google.devtools.cloudtrace.v2.AttributeValue defaultValue) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, com.google.devtools.cloudtrace.v2.AttributeValue> map =
             internalGetAttributeMap().getMap();
@@ -1415,7 +1415,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       public com.google.devtools.cloudtrace.v2.AttributeValue getAttributeMapOrThrow(
           java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         java.util.Map<java.lang.String, com.google.devtools.cloudtrace.v2.AttributeValue> map =
             internalGetAttributeMap().getMap();
@@ -1446,7 +1446,7 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
        */
       public Builder removeAttributeMap(java.lang.String key) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         internalGetMutableAttributeMap().getMutableMap().remove(key);
         return this;
@@ -1475,11 +1475,12 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       public Builder putAttributeMap(
           java.lang.String key, com.google.devtools.cloudtrace.v2.AttributeValue value) {
         if (key == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map key");
         }
         if (value == null) {
-          throw new java.lang.NullPointerException();
+          throw new NullPointerException("map value");
         }
+
         internalGetMutableAttributeMap().getMutableMap().put(key, value);
         return this;
       }
@@ -7233,10 +7234,10 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
 
     @java.lang.Override
     public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-      if (!getTraceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(traceId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 1, traceId_);
       }
-      if (!getSpanIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spanId_)) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 2, spanId_);
       }
       if (type_ != com.google.devtools.cloudtrace.v2.Span.Link.Type.TYPE_UNSPECIFIED.getNumber()) {
@@ -7254,10 +7255,10 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
       if (size != -1) return size;
 
       size = 0;
-      if (!getTraceIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(traceId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, traceId_);
       }
-      if (!getSpanIdBytes().isEmpty()) {
+      if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spanId_)) {
         size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, spanId_);
       }
       if (type_ != com.google.devtools.cloudtrace.v2.Span.Link.Type.TYPE_UNSPECIFIED.getNumber()) {
@@ -10013,13 +10014,13 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
 
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output) throws java.io.IOException {
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 1, name_);
     }
-    if (!getSpanIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spanId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 2, spanId_);
     }
-    if (!getParentSpanIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentSpanId_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 3, parentSpanId_);
     }
     if (displayName_ != null) {
@@ -10065,13 +10066,13 @@ public final class Span extends com.google.protobuf.GeneratedMessageV3
     if (size != -1) return size;
 
     size = 0;
-    if (!getNameBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, name_);
     }
-    if (!getSpanIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(spanId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, spanId_);
     }
-    if (!getParentSpanIdBytes().isEmpty()) {
+    if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(parentSpanId_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(3, parentSpanId_);
     }
     if (displayName_ != null) {
